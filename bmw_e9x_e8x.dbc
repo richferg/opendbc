@@ -270,6 +270,11 @@ BO_ 502 TurnSignals: 2 FRMFA
 BO_ 514 Dimming: 8 FRMFA
 
 BO_ 538 LampStatus: 8 FRMFA
+ SG_ HighBeam : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LowBeam : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RearFog : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FrontFog : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ParkLights : 2|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 550 RainSensorWiperSpeed: 8 FZD
 
@@ -280,6 +285,12 @@ BO_ 704 LCD_lighting: 8 Kombi
 BO_ 758 LightControl: 8 FRMFA
 
 BO_ 760 Time_Date: 8 Kombi
+ SG_ Year : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Month : 36|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Day : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Second : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Minute : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hour : 0|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 762 OccupancySeatBeltContact: 8 ACSM
  SG_ NEW_SIGNAL_1 : 8|8@1+ (1,0) [0|255] "" XXX
@@ -899,6 +910,10 @@ CM_ SG_ 502 TurnSignalActive "Turn signal on or transitioning";
 CM_ SG_ 502 RightTurn "Indicates right blinker or when steering returning right clears left blinker";
 CM_ SG_ 502 LeftTurn "Indicates left blinker or when steering returning left clears right blinker";
 CM_ SG_ 502 HoldActivated "Spikes down if blinker cleared with timeout or turn. Stays off if blinker cleared with stalk";
+
+CM_ SG_ 760 Second "253/0xFD if clock not set";
+CM_ SG_ 760 Minute "253/0xFD if clock not set";
+CM_ SG_ 760 Hour "253/0xFD if clock not set";
 
 CM_ SG_ 790 setMe_0x3FFF "All ones";
 CM_ SG_ 790 DTC_pressed "Traction control off. Message transmitted when pressed. Few presses may be required followed by off.";
